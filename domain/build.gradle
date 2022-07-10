@@ -1,0 +1,20 @@
+plugins {
+    id 'java-library'
+    id 'kotlin'
+    id 'kotlin-kapt'
+}
+def config = getRootProject().extensions.getByName("ext")
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+dependencies {
+    println("Domain Module Dependencies")
+    println("----------------------------")
+    config.domainDep.dependencies.each { dependencyItem ->
+        println("$dependencyItem.type ---> ${dependencyItem.toString()}")
+        add("$dependencyItem.type", dependencyItem.toString())
+    }
+    println("----------------------------")
+}

@@ -1,0 +1,38 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+}
+def config = getRootProject().extensions.getByName("ext")
+android {
+    compileSdkVersion 31
+    defaultConfig {
+        minSdkVersion 17
+        targetSdkVersion 31
+        versionCode 1
+        versionName "1.0"
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments += [
+                        "room.schemaLocation"  : "$projectDir/schemas".toString(),
+                        "room.incremental"     : "true",
+                        "room.expandProjection": "true"]
+            }
+        }
+    }
+}
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+dependencies {
+    implementation project(path: ':domain')
+    println("Data Module Dependencies")
+    println("----------------------------")
+    config.dataDep.dependencies.each { dependencyItem ->
+        println("$dependencyItem.type ---> ${dependencyItem.toString()}")
+        add("$dependencyItem.type", dependencyItem.toString())
+    }
+    println("----------------------------")
+}
