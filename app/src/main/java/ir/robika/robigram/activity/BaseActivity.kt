@@ -1,6 +1,5 @@
 package ir.robika.robigram.activity
 
-import android.app.Activity
 import android.os.Bundle
 import androidx.annotation.LayoutRes
 import androidx.appcompat.app.AppCompatActivity
@@ -12,8 +11,8 @@ import javax.inject.Inject
 
 open class BaseActivity<VM : ViewModel, VB : ViewDataBinding?>(@LayoutRes val activityLayout: Int) :
     AppCompatActivity() {
-    @Inject
     var viewModel: VM? = null
+        @Inject set
     var dataBinding: VB? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

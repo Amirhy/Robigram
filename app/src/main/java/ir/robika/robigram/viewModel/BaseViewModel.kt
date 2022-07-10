@@ -7,10 +7,11 @@ import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 import kotlin.coroutines.EmptyCoroutineContext
 
 @HiltViewModel
-open class BaseViewModel : ViewModel() {
+open class BaseViewModel @Inject constructor() : ViewModel() {
     val defaultExceptionHandler = CoroutineExceptionHandler { _, exception ->
         showDefaultError(exception)
     }
