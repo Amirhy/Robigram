@@ -39,12 +39,12 @@ android {
 }
 
 dependencies {
-    implementation project(path: ':domain')
-    implementation project(path: ':data')
     println("App Module Dependencies")
     println("----------------------------")
     config.appDep.dependencies.each { dependencyItem ->
         println("$dependencyItem.type ---> ${dependencyItem.toString()}")
         add("$dependencyItem.type", dependencyItem.toString())
     }
+    implementation project(path: ':domain')
+    implementation project(path: ':data')
 }

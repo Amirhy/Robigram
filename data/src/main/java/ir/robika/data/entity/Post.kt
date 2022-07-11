@@ -1,10 +1,12 @@
 package ir.robika.data.entity
 
 import androidx.room.Entity
+import androidx.room.PrimaryKey
 
 @Entity
 data class Post(
-    val id: Long,
+    @PrimaryKey
+    val id: Int,
     val imageUrl: String,
     val caption: String,
     val submitTime: Long,

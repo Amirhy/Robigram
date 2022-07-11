@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/postsListFragment">
+
+    <fragment
+        android:id="@+id/postsListFragment"
+        android:name="ir.robika.robigram.fragment.PostsListFragment"
+        android:label="PostsListFragment" >
+        <action
+            android:id="@+id/action_postsListFragment_to_commentsLDetailFragment"
+            app:destination="@id/commentsLDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/commentsLDetailFragment"
+        android:name="ir.robika.robigram.fragment.CommentsLDetailFragment"
+        android:label="CommentsLDetailFragment" />
+</navigation>
