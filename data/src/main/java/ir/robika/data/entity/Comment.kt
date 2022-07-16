@@ -5,6 +5,6 @@ import androidx.room.PrimaryKey
 import ir.robika.domain.model.CommentModel
 
 @Entity
-data class Comment(val writerUserId: Int, @PrimaryKey val id: Int, val content: String) :
-    CommentModel() {
+data class Comment(val writerUserId: Int, @PrimaryKey val id: Int, val content: String,val postId:Int) :
+    CommentModel {
 }

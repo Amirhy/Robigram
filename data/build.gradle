@@ -7,7 +7,7 @@ def config = getRootProject().extensions.getByName("ext")
 android {
     compileSdkVersion 31
     defaultConfig {
-        minSdkVersion 17
+        minSdkVersion 21
         targetSdkVersion 31
         versionCode 1
         versionName "1.0"

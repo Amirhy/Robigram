@@ -4,8 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Amirhosein/StudioProjects/Robigram/app/src/main/res/layout/fragment_comments_detail.xml" value="0.2" />
-        <entry key="..\:/Users/Amirhosein/StudioProjects/Robigram/app/src/main/res/layout/fragment_post_list.xml" value="0.26666666666666666" />
-        <entry key="..\:/Users/Amirhosein/StudioProjects/Robigram/app/src/main/res/layout/item_post_list.xml" value="0.26666666666666666" />
+        <entry key="..\:/Users/Amirhosein/StudioProjects/Robigram/app/src/main/res/layout/fragment_post_list.xml" value="0.251953125" />
+        <entry key="..\:/Users/Amirhosein/StudioProjects/Robigram/app/src/main/res/layout/item_comment_list.xml" value="0.1" />
+        <entry key="..\:/Users/Amirhosein/StudioProjects/Robigram/app/src/main/res/layout/item_post_list.xml" value="0.24022346368715083" />
       </map>
     </option>
   </component>
